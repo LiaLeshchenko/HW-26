@@ -325,8 +325,7 @@
           <li class="footer-contact-item footer-contact2"><a class="footer-contact-link" href="tel:+380961111111">+38 096 111 11 11</a></li>
         </ul>
       </address>
-      
-      
+      <!-- join -->
       <div class="join-container">
       <h2 class="join-title">приєднуйтесь</h2>
       <ul class="join-list">
@@ -360,17 +359,99 @@
         </li>
       </ul>
       </div>
+      <!-- Підписка -->
+      <!-- <div class="subscribe"> -->
+        <h3 class="subscribe-title">ПІДПИШІТЬСЯ НА РОЗСИЛКУ</h3>
+        <form class="subscribe-form">
+          <label class="subscribe-label">
+            <input 
+              class="subscribe-input" 
+              type="email" 
+              placeholder="E-mail"
+              required 
+              minlength="4" 
+              maxlength="10"
+              title="Адрес електронної почти введений некоректно! Приклад:example@mail.com">
+          </label>
+          <button class="subscribe-btn">Підписатися</button>
+          <svg class="subscribe-svg">
+            <use class="subscribe-use" href="./img/sprite.svg#icon-plain"></use>
+          </svg>
+        </form>
+      </div>
       </div>
     </footer>
     <!-- modal window -->
-<div class="backdrop is-hidden" data-modal>
+        <div class="backdrop is-hidden" data-modal>
     <div class="modal">
-      <svg class="modal-escape-icon" data-close-modal>
-        <use href="./img/sprite.svg#icon-escape">
+      <button class="btn" data-close-modal>
+      <svg class="modal-close-btn-svg">
+          <use class="modal-close-btn-use" href="./img/sprite.svg#icon-escape"></use>
       </svg>
-      </div>
-    <h2>Залиште свої дані, ми вам передзвонимо</h2>
+      </button>
+    <h2 class="modal-name">Залиште свої дані, ми вам передзвонимо</h2>
+    <form class="modal-form">
+      <label class="modal-label">
+        <span class="modal-span">Ім'я</span>
+        <input 
+        class="modal-input modal-input-name"
+        type="text" 
+        required 
+        minlength="6" 
+        maxlength="20" 
+        pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+        title="Користувач повинен мати ім'я, прізвище розділене пробілом та написане англійською мовою">
+        <svg class="modal-svg" width="12px" height="12px">
+          <use class="modal-use" href="./img/sprite.svg#icon-name"></use>
+        </svg>
+      </label>
+      <label class="modal-label">
+        <span class="modal-span">Телефон</span>
+        <input 
+        class="modal-input modal-input-phone" 
+        type="tel" 
+        required 
+        minlength="13"
+        maxlength="13"
+        title="Номер телефону введений некоректно! Приклад:+380000000000">
+        <svg class="modal-svg" width="13px" height="13px">
+          <use class="modal-use" href="./img/sprite.svg#icon-phone-namber"></use>
+        </svg>
+      </label>
+      <label class="modal-label">
+        <span class="modal-span">Пошта</span>
+        <input 
+        class="modal-input modal-input-mail" 
+        type="email" 
+        required 
+        minlength="4" 
+        maxlength="10"
+        title="Адрес електронної почти введений некоректно! Приклад:example@mail.com">
+        <svg class="modal-svg" width="15px" height="12px"> 
+          <use class="modal-use" href="./img/sprite.svg#icon-mail-hero"></use>
+        </svg>
+      </label>
+      <label class="modal-label modal-label-comment">
+        <span class="modal-span">Коментар</span>
+        <input 
+        class="modal-input-comment" 
+        id="comment"
+        type="text" 
+        maxlength="500"
+        placeholder="Введіть текст">
+      </label>
+      <label class="modal-label-checkbox">
+        <input 
+        class="modal-input-checkbox" 
+        id="checkbox"
+        type="checkbox" 
+        required>
+        <span class="modal-span">Погоджуюся з розсилкою та приймаю <a class="modal-span-link" href="#">Умови договору</a></span>
+      </label>
+      <button class="modal-btn">Відправити</button>
+    </form>
+  </div>
 </div>
-<script src="./js/modal.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

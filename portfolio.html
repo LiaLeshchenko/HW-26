@@ -14,23 +14,34 @@ wght@0,700;1,700&family=Roboto:wght@400;500;700;900&display=swap" rel="styleshee
     </head>
 
   <body class="body">
-    <header class="header">
-      <div class="container header-container parent-flex">
+    <!-- header -->
+      <div class="container parent-flex">
       <a href="./index.html" class="header-Studio"><span class="header-Web">Web</span>Studio</a>
       <nav class="header-nav">
         <ul class="header-nav-list">
-          <li class="header-nav-item item"><a class="header-nav-link" href="./index.html">Студія</a></li>
-          <li class="header-nav-item item2"><a class="header-nav-link header-nav-portfolio" href="./portfolio.html">Портфоліо</a></li>
+          <li class="header-nav-item item"><a class="header-nav-link header-nav-studio" href="./index.html">Студія</a></li>
+          <li class="header-nav-item item2"><a class="header-nav-link" href="./portfolio.html">Портфоліо</a></li>
           <li class="header-nav-item item3"><a class="header-nav-link" href="#">Контакти</a></li>
         </ul>
       </nav>
       <ul class="header-contact">
-        <li class="header-contact-item contact-item"><a class="header-contact-link header-nav-portfolio" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-        <li class="header-contact-item contact-item2"><a class="header-contact-link" href="tel:+380961111111">+38 096 111 11 11</a></li>
+        <li class="header-contact-item contact-item">
+          <svg class="contact-icon" width="16" height="12">
+            <use href="./img/sprite.svg#icon-mail-header"/>
+          </svg>
+          <a class="header-contact-link header-nav-studio" href="mailto:info@devstudio.com">info@devstudio.com</a>
+        </li>
+        <li class="header-contact-item contact-item2">
+          <svg class="contact-icon" width="10" height="16">
+            <use href="./img/sprite.svg#icon-smartphone"/>
+          </svg>
+          <a class="header-contact-link" href="tel:+380961111111">+38 096 111 11 11</a>
+        </li>
       </ul>
       </div>
     </header>
     <main>
+      <!-- filter-portfolio -->
       <section class="portfolio">
         <div class="container">
         <ul class="portfolio-filter">
@@ -41,6 +52,7 @@ wght@0,700;1,700&family=Roboto:wght@400;500;700;900&display=swap" rel="styleshee
           <li class="portfolio-item"><button type="submit" class="filter-button">Маркетинг</button></li>
         </ul>
 
+        <!-- portfolio-works -->
         <h1 class="portfolio-title">Наши роботи</h1>
         <ul class="portfolio-list">
           <li class="portfolio-list-item">
@@ -85,7 +97,8 @@ wght@0,700;1,700&family=Roboto:wght@400;500;700;900&display=swap" rel="styleshee
                 height="294"/>
               <h2 class="portfolio-list-title">Проєкт Prime</h2>
               <p class="portfolio-list-text">Маркетинг</p></a>
-          </li>         
+          </li> 
+
           <li class="portfolio-list-item">
             <a href="#" class="portfolio-link">
               <img class="portfolio-img"
@@ -96,6 +109,7 @@ wght@0,700;1,700&family=Roboto:wght@400;500;700;900&display=swap" rel="styleshee
               <h2 class="portfolio-list-title">Проєкт Boxes</h2>
               <p class="portfolio-list-text">Додаток</p></a>
           </li>
+
           <li class="portfolio-list-item">
             <a href="#" class="portfolio-link">
               <img class="portfolio-img"
@@ -139,14 +153,13 @@ wght@0,700;1,700&family=Roboto:wght@400;500;700;900&display=swap" rel="styleshee
               <h2 class="portfolio-list-title">Growing Business</h2>
               <p class="portfolio-list-text">Додаток</p></a>
           </li>
-          
-        </ul>
+          </ul>
         </div>
       </section>
     </main>
+    <!-- footer -->
         <footer class="footer">
-      
-        <div class="container footer-flex">
+      <div class="container footer-flex">
       <address>
         <a href="./index.html" class="footer-Studio"><span class="footer-Web">Web</span>Studio</a>
         <ul  class="footer-contact">
@@ -155,8 +168,7 @@ wght@0,700;1,700&family=Roboto:wght@400;500;700;900&display=swap" rel="styleshee
           <li class="footer-contact-item footer-contact2"><a class="footer-contact-link" href="tel:+380961111111">+38 096 111 11 11</a></li>
         </ul>
       </address>
-      
-      
+      <!-- join -->
       <div class="join-container">
       <h2 class="join-title">приєднуйтесь</h2>
       <ul class="join-list">
@@ -189,6 +201,26 @@ wght@0,700;1,700&family=Roboto:wght@400;500;700;900&display=swap" rel="styleshee
           </a>
         </li>
       </ul>
+      </div>
+      <!-- Підписка -->
+      <div class="subscribe">
+        <h3 class="subscribe-text">ПІДПИШІТЬСЯ НА РОЗСИЛКУ</h3>
+        <form class="subscribe-form">
+          <label class="subscribe-label">
+            <input 
+              class="subscribe-input" 
+              type="email" 
+              placeholder="E-mail"
+              required 
+              minlength="4" 
+              maxlength="10"
+              title="Адрес електронної почти введений некоректно! Приклад:example@mail.com">
+          </label>
+          <button class="subscribe-btn">Підписатися</button>
+          <svg class="subscribe-svg">
+            <use class="subscribe-use" href="./img/sprite.svg#icon-plain"></use>
+          </svg>
+        </form>
       </div>
       </div>
     </footer>

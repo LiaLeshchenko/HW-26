@@ -1,6 +1,8 @@
 :root {
     --bg-advantages-color:#F5F4FA;
 }
+
+/* after-hero */
 .before-item::before {
     content: " ";
     display: block;
